@@ -57,7 +57,7 @@ def guess_letter(lives, display, chosen_word, wrong_guesses):
         if lives <= 0:
             end_game(lives, chosen_word)
     # While the player has not won or ran out of lives, the game keeps running.
-    while not check_win(display) and lives > 0: return guess_letter(lives, display, chosen_word, wrong_guesses)
+    if not check_win(display) and lives > 0: return guess_letter(lives, display, chosen_word, wrong_guesses)
 
 def main():
   # Setting chosen word, the hidden letter display and 7 lives at the start of the game.
